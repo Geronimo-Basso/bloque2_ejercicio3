@@ -5,11 +5,20 @@ using namespace std;
 int main() {
     PilaGen<int> *pilaI = new PilaGen<int>;
     PilaGen<int> *pilaJ = new PilaGen<int>;
+//    pilaI->insertar_cabeza(10);
+//    pilaJ->insertar_cabeza(20);
+//    pilaI->insertar_cabeza(20);
+//    pilaI->insertar_cabeza(-10);
+//    pilaJ->insertar_cabeza(0);
+//    pilaJ->eliminar_cabeza();
+//    pilaI->insertar_cabeza(0);
+//    pilaJ->insertar_cabeza(100);
+//    cout << "Espera aca" ;
     bool condicion = true;
     int opcionMenu , i , j;
     cout << "Bienvenido a nuestro programa, dependiendo de un par de número enteros (i,j) ingregado podremos realizaer diferentes tareas" << endl;
     while ( condicion ){
-        cout << "Opciones Menu: \n1. Añadir par de números  \n2. Mostar contenido de las pilas  \n3. Terminar programa" << endl;
+        cout << "Opciones Menu: \n1. Añadir par de números  \n2. Terminar programa" << endl;
         cin >> opcionMenu;
         switch ( opcionMenu ) {
             case 1:
@@ -26,6 +35,7 @@ int main() {
                     cout << "------------- PILA i -------------------" << endl;
                     for(int k = 0 ; k < pilaI->size() ; k++ ){
                         cout << pilaI->pop( k ) << endl;
+//                        cout << pilaI->quitar() << endl;
                     }
                     cout << "------------- PILA j -------------------" << endl;
                     for(int m = 0 ; m < pilaJ->size() ; m++ ){
@@ -38,10 +48,6 @@ int main() {
                 break;
             }
             case 2:
-            {
-                break;
-            }
-            case 3:
             {
                 condicion = false;
                 break;

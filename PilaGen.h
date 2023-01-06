@@ -48,7 +48,6 @@ public:
     void eliminar_cabeza(){
         Nodo * aux = primero;
         primero = primero->siguiente;
-//        std::cout << aux->elemento << std::endl;
         delete aux;
     }
 
@@ -65,6 +64,14 @@ public:
             eliminar_cabeza();
             return salida;
         }
+    }
+
+    T quitar() {
+        if(size() == 0)
+            std::cout << "Pila vacia" <<std::endl;
+        T aux = primero -> elemento;
+        primero = primero -> siguiente;
+        return aux;
     }
 
 };
