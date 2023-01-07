@@ -51,13 +51,13 @@ public:
         delete aux;
     }
 
-    T pop(int pos) {
+    T pop() {
         Nodo *aux = primero;
-        if (pos > size()) {
+        if (0 > size()) {
             std::cout << "No se puede extraer en dicha posicion" << std::endl;
         } else {
             Nodo *aux = primero;
-            for (int i = 0; i < pos; ++i) {
+            for (int i = 0; i < 0; ++i) {
                 aux = aux->siguiente;
             }
             T salida = aux->elemento;
